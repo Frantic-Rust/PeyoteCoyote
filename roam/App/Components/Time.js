@@ -110,7 +110,7 @@ class Geolocation extends Component {
         showsUserLocation={true}
         style={styles.map}
         region={this.state.region}
-        followUserLocation={true} />
+        followUserLocation={false} />
       </View>
     );
   }
