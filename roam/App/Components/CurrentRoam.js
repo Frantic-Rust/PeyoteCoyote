@@ -46,7 +46,7 @@ class roamView extends Component {
       <Image style={styles.backgroundImage}
         source={require('../../imgs/uni.jpg')}>
         <Text style={styles.title}> Match! </Text>
-        <Text style={[styles.subTitle, styles.boldify]}> { this.state.destination }</Text>
+        <Text styl3e={[sty3les.subTitle, styles.boldify]}> { this.state.destination }</Text>
         <Text style={[styles.subTitle, styles.boldify]}> { this.state.address }</Text>
         <Text style={styles.subTitle}>Buddy: { this.state.buddy }</Text>
         <Text style={styles.subTitle}>Meetup Time: <Text style={styles.boldify}>{ this.state.meetupTime }</Text></Text>
