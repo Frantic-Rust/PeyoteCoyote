@@ -318,7 +318,26 @@ module.exports = {
           }
         }
       });
-}
+
+  },
+  populateHistory: (req, res) => {
+    const userName = req.body.username;
+    fetch(baseLink_history + mongoDB_API_KEY)
+      .then((response) => response.json())
+      .then((responseData) => {
+        let returnArray = [];
+        for (let i = 0; i < responseData.length; i++) {
+          if (userName === responseData[i].username1 || userName === responseData[i].username2 ) {
+            returnArray.push(responseData[i]);
+          }
+        }
+        res.status(201).send(returnArray);
+      })
+      .catch((error) => {
+        console.warn(error);
+        res.sendStatus(400);
+      });
+  }
 
           //if it is within the radius, add it to an array
         //   if(distance <= radius) {
